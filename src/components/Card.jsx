@@ -33,14 +33,14 @@ function Card(props) {
         <ul>
           {
             props.type.map((type, index)=>(
-              <li onClick={()=>onClickType(index)} className={activeType === index ? "active" : ""}>{typeNeme[type]}</li>
+              <li key={type} onClick={()=>onClickType(index)} className={activeType === index ? "active" : ""}>{typeNeme[type]}</li>
             ))
           }
         </ul>
         <ul>
           {
             props.size.map((size, index) => (
-              <li onClick={()=>onClickSize(index)} className={ activeSize === index ? "active" : ""}>{size} см.</li>
+              <li key={size} onClick={()=>onClickSize(index)} className={ activeSize === index ? "active" : ""}>{size} см.</li>
             ))
           }
         </ul>
