@@ -1,30 +1,48 @@
-import React, {useState, useEffect}from 'react';
+import React from 'react';
 
 
 function Card(props) {
-  const [pizzaCount, setPizzaCount] = useState(0);
+  const [pizzaCount, setPizzaCount] = React.useState(0);
+  const [activeType, setActivType] = React.useState(0);
+  const [activeSize, setActivSize] = React.useState(0);
   
   const onClickBtnAdd = () => {
     setPizzaCount(pizzaCount + 1);
   }
 
+  const onClickType = (activeType) => {
+    setActivType(activeType);
+  }
+
+  const onClickSize = (activeSize) => {
+    setActivSize(activeSize);
+  }
+
+
+
+  const typeNeme = ['тонкая','традиционная'];
   return(
     <div className="pizza-block">
       <img
         className="pizza-block__image"
-        src="https://dodopizza-a.akamaihd.net/static/Img/Products/Pizza/ru-RU/b750f576-4a83-48e6-a283-5a8efb68c35d.jpg"
+        src={props.image}
         alt="Pizza"
       />
       <h4 className="pizza-block__title">{props.title}</h4>
       <div className="pizza-block__selector">
         <ul>
-          <li className="active">тонкое</li>
-          <li>традиционное</li>
+          {
+            props.type.map((type, index)=>(
+              <li onClick={()=>onClickType(index)} className={activeType === index ? "active" : ""}>{typeNeme[type]}</li>
+            ))
+          }
         </ul>
         <ul>
-          <li className="active">26 см.</li>
-          <li>30 см.</li>
-          <li>40 см.</li>
+          {
+            props.size.map((size, index) => (
+              <li onClick={()=>onClickSize(index)} className={ activeSize === index ? "active" : ""}>{size} см.</li>
+            ))
+          }
         </ul>
       </div>
       <div className="pizza-block__bottom">
