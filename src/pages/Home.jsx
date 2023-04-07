@@ -13,6 +13,7 @@ function Home(){
   React.useEffect(() => {
   axios.get('https://642e23268ca0fe3352c96feb.mockapi.io/pizza')
     .then((res) => { setPizza(res.data); setIsLoading(false) });
+    window.scrollTo(0, 0);
   },[]);
   return (
     <>
