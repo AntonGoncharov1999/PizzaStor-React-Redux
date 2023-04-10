@@ -1,7 +1,7 @@
 import React from 'react';
 
 
-function Sort({sortType,onChangeSort}) {
+function Sort({sortType,onChangeSort,}) {
   const [sortUl, setSortUl] = React.useState(false);
 
   const list = [

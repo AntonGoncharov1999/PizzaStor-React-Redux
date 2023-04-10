@@ -1,0 +1,31 @@
+.pagination{
+  display: inline-flex;
+
+  a{
+    display: inline-block;
+    text-align: center;
+    width: 42px;
+    height: 42px;
+    border: 1px solid #fe5f1c;
+    border-radius: 30px;
+    margin-right: 10px;
+    padding-top: 8px;
+    cursor: pointer;
+    margin-right: 10px;
+    color: #fe5f1c;
+    &:hover {
+        background-color: #fe5f1c;
+        color: #fff;
+      }
+  }
+
+  :global{
+    .active{
+      a {
+        background-color: #fe5f1c;
+        color: #fff;
+      }
+    } 
+      
+  }
+}

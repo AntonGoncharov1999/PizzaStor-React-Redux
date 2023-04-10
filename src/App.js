@@ -9,15 +9,16 @@ import CartEmty from './pages/CartEmty';
 
 import './scss/app.scss';
 
-
 function App() {
+  const [searthValue, setSearthValue] = React.useState('');
+
   return (
     <div className="wrapper">
-      <Header />
+      <Header searthValue={searthValue} setSearthValue={setSearthValue} />
       <div className="content">
         <div className="container">
           <Routes>
-            <Route path="/" element={<Home/>}/>
+            <Route path="/" element={<Home searthValue={searthValue}/>}/>
             <Route path="/note-found" element={<NoteFound/>}/>
             <Route path="/cart" element={<Cart/>}/>
             <Route path="/cart-emty" element={<CartEmty/>}/>

@@ -1,7 +1,9 @@
 import React from 'react';
 import {Link} from 'react-router-dom'
 
-function Header() {
+import Searth from '../components/Searth/Searth'
+
+function Header({searthValue, setSearthValue}) {
   return(
     <div className="header">
       <div className="container">
@@ -12,6 +14,7 @@ function Header() {
             <p>самая вкусная пицца во вселенной</p>
           </div>
         </div>
+        <Searth searthValue={searthValue} setSearthValue={setSearthValue} />
         <div className="header__cart">
           <Link to="/cart" className="button button--cart">
             <span>520 ₽</span>
