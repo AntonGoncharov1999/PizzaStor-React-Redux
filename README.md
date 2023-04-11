@@ -70,3 +70,7 @@
 
 - избавился от Props Drilling
 - разабраца с ошибкой useContext (udefaind)
+
+# 11.04.2023 9 коммит
+
+- решена ошибка useContext (udefaind)

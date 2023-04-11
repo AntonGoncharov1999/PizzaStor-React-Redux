@@ -1,17 +1,16 @@
-import {React} from 'react';
+import React from 'react';
 
 import styles from './Searth.module.scss';
-import {SearthContext} from '../..//App';
+import {SearthContext} from '../..//App.js';
+
 
 function Searth () {
   const {searthValue, setSearthValue} = React.useContext(SearthContext);
-
   return (
   <input
-    onChange={(event)=>setSearthValue(event.target.value)}  
     value={searthValue}
+    onChange={(event)=>setSearthValue(event.target.value)}  
     className={styles.input} 
-    type="text" 
     placeholder='Поиск пицци...' />
   )
 }

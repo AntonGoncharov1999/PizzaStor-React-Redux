@@ -9,7 +9,7 @@ import CartEmty from './pages/CartEmty';
 
 import './scss/app.scss';
 
-export const SearthContext = React.createContext();
+export const SearthContext = React.createContext('');
 
 function App() {
   const [searthValue, setSearthValue] = React.useState('');
