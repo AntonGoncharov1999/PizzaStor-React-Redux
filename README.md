@@ -65,3 +65,8 @@
 - разбил на стили на модули пагинацию и поиск
 - !!!! разобраться с ошибкой onPageChange is not a function
 - !!!! разобраться с ошибкой поиска в setSearthValue
+
+# 11.04.2023 9 коммит
+
+- избавился от Props Drilling
+- разабраца с ошибкой useContext (udefaind)

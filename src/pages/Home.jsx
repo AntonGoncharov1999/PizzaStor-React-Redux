@@ -7,8 +7,10 @@ import Sort from '../components/Sort';
 import Card from '../components/pizzaBlock/Card';
 import Sceleton from '../components/pizzaBlock/CardSceleton';
 import Pagination from '../components/Pagination/Pagination';
+import {SearthContext} from '.././App';
 
-function Home({searthValue}){
+function Home(){
+  const {searthValue} = React.useContext(SearthContext);
   const [pizza, setPizza] = React.useState([]);
   const [isLoading, setIsLoading] = React.useState(true);
   const [sortType, setSortType] = React.useState({ name: 'популярности', sort: 'rating' });
