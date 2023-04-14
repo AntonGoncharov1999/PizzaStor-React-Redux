@@ -4,7 +4,7 @@ import styles from './Searth.module.scss';
 import {SearthContext} from '../..//App.js';
 
 
-function Searth () {
+function Searth(){
   const {searthValue, setSearthValue} = React.useContext(SearthContext);
   return (
   <input

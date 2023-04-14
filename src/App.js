@@ -13,7 +13,6 @@ export const SearthContext = React.createContext('');
 
 function App() {
   const [searthValue, setSearthValue] = React.useState('');
-  console.log(searthValue);
   return (
     <div className="wrapper">
       <SearthContext.Provider value={{searthValue, setSearthValue}}>
